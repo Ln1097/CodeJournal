@@ -6,6 +6,11 @@ body {
   margin: 0;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 header {
   background-color: blueviolet;
   color: white;
