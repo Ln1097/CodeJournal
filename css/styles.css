@@ -6,116 +6,43 @@ body {
   margin: 0;
 }
 
-.container {
-  max-width: 575px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.column-half {
-  display: block;
-  flex-basis: calc(100%/2);
-}
-
 header {
   background-color: blueviolet;
   color: white;
   height: 50px;
 }
 
+h1 {
+  margin-top: 0;
+}
+
 img {
-  width: 350px;
+  width: 100%;
 }
 
-input[type="text"][id="titlerow"] {
-  width: 350px;
-}
-
-input[type="text"][id="photorow"] {
-  width: 350px;
-}
-
-input[type="text"][id="notesrow"] {
-  width: 350px;
-  height: 100px;
+label,
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 button {
   background-color: purple;
   color: white;
-  float: right;
+}
+
+.display-end {
+  display: flex;
+  justify-content: end;
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 575px;
-  }
-
-  header {
-    background-color: blueviolet;
-    color: white;
-    height: 50px;
-  }
-
-  img {
-    width: 500px;
-  }
-
-  div.column-half label[for="title"][id="title"] {
-    display: flex;
-    position: absolute;
-    right: 0;
-    margin-right: 330px;
-    margin-top: -500px;
-    font-size: larger;
-  }
-
-  input[type="text"][id="titlerow"] {
-    display: flex;
-    position: absolute;
-    right: 0;
-    width: 350px;
-    margin-right: 20px;
-    margin-top: -450px;
-  }
-
-  div.column-half label[for="PhotoURL"][id="photolink"] {
-    display: flex;
-    position: absolute;
-    right: 0;
-    margin-right: 280px;
-    margin-top: -400px;
-    font-size: larger;
+  .column-half {
+    flex-basis: calc(100% / 2);
   }
 
   label[for="notes"] {
     font-size: larger;
-  }
-
-  input[type="text"][id="photorow"] {
-    display: flex;
-    position: absolute;
-    right: 0;
-    width: 350px;
-    margin-right: 20px;
-    margin-top: -350px;
-  }
-
-  input[type="text"][id="notesrow"] {
-    width: 860px;
-    height: 100px;
-  }
-
-  button {
-    background-color: purple;
-    color: white;
-    position: absolute;
-    right: 0;
-    margin-right: 20px;
   }
 }
