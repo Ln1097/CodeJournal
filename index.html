@@ -24,16 +24,16 @@
     <main class="container">
       <div data-view="entry-form">
         <div class="row">
-          <div class="column-full" id="column-half">
+          <div class="column-half">
             <form>
               <h2>New Entry</h2>
-              <input type="image" id="img"src="./images/placeholder-image-square.jpg" alt="placeholder"><br>
-              <label for="title">Title</label><br>
-              <input type="text" id="titlerow"required><br>
-              <label for="PhotoURL" id="photolink">Photo URL</label><br>
-              <input type="text" id="photorow" required><br>
-              <label for="notes">Notes</label><br>
-              <input type="text" id="notesrow"required><br>
+              <img src="./images/placeholder-image-square.jpg" alt="placeholder">
+              <div class="column-half"><label for="title" id="title">Title</label></div>
+              <input type="text" id="titlerow"required>
+              <div class="column-half"><label for="PhotoURL" id="photolink">Photo URL</label></div>
+              <input type="text" id="photorow" required>
+              <label for="notes">Notes</label>
+              <input type="text" id="notesrow"required>
               <button>SAVE</button>
             </form>
           </div>

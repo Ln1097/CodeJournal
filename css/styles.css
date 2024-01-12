@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
 .container {
   max-width: 575px;
   margin: 0 auto;
@@ -13,80 +17,38 @@
   flex-wrap: wrap;
 }
 
-.column-full {
-  flex-basis: calc(100%);
-}
-
-#column-half {
+.column-half {
+  display: block;
   flex-basis: calc(100%/2);
 }
 
-body {
-  margin: 0;
-}
-
-header > .container {
+header {
   background-color: blueviolet;
+  color: white;
+  height: 50px;
+}
+
+img {
+  width: 350px;
+}
+
+input[type="text"][id="titlerow"] {
+  width: 350px;
+}
+
+input[type="text"][id="photorow"] {
+  width: 350px;
+}
+
+input[type="text"][id="notesrow"] {
+  width: 350px;
   height: 100px;
-  max-width: 100%;
 }
 
-header > .container > h1 {
-  color: white;
-  font-size: xx-large;
-  display: flex;
-  justify-content: left;
-  position: absolute;
-  left: 20px;
-  top: 10px;
-  right: 0;
-}
-
-main.container > div[data-view="entry-form"] > div.row > div.column-full > form > h2 {
-  color: black;
-}
-
-main.container > div[data-view="entry-form"] > div.row > div.column-full > form > input[type="image"] {
-  width: 400px;
-  height: 400px;
-}
-
-main.container > div[data-view="entry-form"] > div.row > div.column-full > form > label[for="title"] {
-  font-size: large;
-}
-
-main.container > div[data-view="entry-form"] > div.row > div.column-full > form > label[for="PhotoURL"] {
-  font-size: large;
-}
-
-main.container > div[data-view="entry-form"] > div.row > div.column-full > form > label[for="notes"] {
-  font-size: large;
-}
-
-main.container > div[data-view="entry-form"] > div.row > div.column-full > form > input[type="text"][id="titlerow"] {
-  width: 400px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-main.container > div[data-view="entry-form"] > div.row > div.column-full > form > input[type="text"][id="photorow"] {
-  width: 400px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-main.container > div[data-view="entry-form"] > div.row > div.column-full > form > input[type="text"][id="notesrow"] {
-  width: 400px;
-  height: 150px;
-  margin-top: 20px;
-}
-
-main.container > div[data-view="entry-form"] > div.row > div.column-full > form > button {
-  border-radius: 10%;
-  float: right;
-  color: white;
+button {
   background-color: purple;
-  margin-right: -3px;
+  color: white;
+  float: right;
 }
 
 @media screen and (min-width: 768px) {
@@ -94,80 +56,66 @@ main.container > div[data-view="entry-form"] > div.row > div.column-full > form 
     max-width: 575px;
   }
 
-  header > .container {
+  header {
     background-color: blueviolet;
-    height: 100px;
-    max-width: 100%;
-  }
-
-  header > .container > h1 {
     color: white;
-    font-size: xx-large;
-    display: flex;
-    justify-content: left;
-    position: absolute;
-    left: 370px;
-    top: 10px;
-    right: 0;
+    height: 50px;
   }
 
-  main.container > div[data-view="entry-form"] > div.row > div.column-full > form > h2 {
-    color: black;
+  img {
+    width: 500px;
   }
 
-  main.container > div[data-view="entry-form"] > div.row > div#column-half > form > input[type="image"] {
-    width: 400px;
-    height: 400px;
-  }
-
-  main.container > div[data-view="entry-form"] > div.row > div#column-half > form > label[for="title"] {
-    font-size: large;
-    position: absolute;
-    right: 0;
-    margin-right: 420px;
-    margin-top: -370px;
-  }
-
-  main.container > div[data-view="entry-form"] > div.row > div#column-half > form > input[type="text"][id="titlerow"] {
-    width: 400px;
+  div.column-half label[for="title"][id="title"] {
     display: flex;
     position: absolute;
     right: 0;
-    margin-right: 50px;
+    margin-right: 330px;
+    margin-top: -500px;
+    font-size: larger;
+  }
+
+  input[type="text"][id="titlerow"] {
+    display: flex;
+    position: absolute;
+    right: 0;
+    width: 350px;
+    margin-right: 20px;
+    margin-top: -450px;
+  }
+
+  div.column-half label[for="PhotoURL"][id="photolink"] {
+    display: flex;
+    position: absolute;
+    right: 0;
+    margin-right: 280px;
+    margin-top: -400px;
+    font-size: larger;
+  }
+
+  label[for="notes"] {
+    font-size: larger;
+  }
+
+  input[type="text"][id="photorow"] {
+    display: flex;
+    position: absolute;
+    right: 0;
+    width: 350px;
+    margin-right: 20px;
     margin-top: -350px;
-    height: 40px;
   }
 
-  main.container > div[data-view="entry-form"] > div.row > div#column-half > form > label[for="PhotoURL"] {
-    font-size: large;
-    position: absolute;
-    right: 0;
-    margin-right: 370px;
-    margin-top: -300px;
+  input[type="text"][id="notesrow"] {
+    width: 860px;
+    height: 100px;
   }
 
-  main.container > div[data-view="entry-form"] > div.row > div#column-half > form > input[type="text"][id="photorow"] {
-    width: 400px;
-    display: flex;
-    position: absolute;
-    right: 0;
-    margin-right: 50px;
-    margin-top: -290px;
-    height: 40px;
-  }
-
-  main.container > div[data-view="entry-form"] > div.row > div.column-full > form > input[type="text"][id="notesrow"] {
-    width: 850px;
-    height: 150px;
-    margin-top: 20px;
-  }
-
-  main.container > div[data-view="entry-form"] > div.row > div.column-full > form > button {
-    border-radius: 10%;
-    color: white;
+  button {
     background-color: purple;
+    color: white;
     position: absolute;
     right: 0;
-    margin-right: 30px;
+    margin-right: 20px;
   }
 }

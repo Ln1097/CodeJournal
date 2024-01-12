@@ -9,9 +9,9 @@ const form=document.querySelector('form')
 form.addEventListener('submit',function(event){
   event.preventDefault()
   const input={
-    notes:form.notes,
-    title:form.title,
-    photoUrl:form.PhotoURL
+    notes: event.target.elements.notesrow.value,
+    title: event.target.elements.titlerow.value,
+    photoUrl: event.target.elements.photorow.value
   };
   input.entryId=data.nextEntryId;
   data.nextEntryId++;
