@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  background-color: blueviolet;
+  color: white;
+  height: 50px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+img {
+  width: 100%;
+}
+
+label,
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: purple;
+  color: white;
+}
+
+.display-end {
+  display: flex;
+  justify-content: end;
+}
+
+@media screen and (min-width: 768px) {
+  .column-half {
+    flex-basis: calc(100% / 2);
+  }
+
+  label[for="notes"] {
+    font-size: larger;
+  }
+}
